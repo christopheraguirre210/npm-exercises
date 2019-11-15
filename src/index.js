@@ -1,7 +1,10 @@
 const $ = require('jquery');
 
-const sayHello = () => console.log("Hello");
+const howdy = require('./say-hello.js');
 
-sayHello();
+const sayHello = () => "Hello";
 
-$('body').css('background-color', 'pink');
+howdy.sayHi();
+
+
+$('body').css('background-color', 'pink').html(`<h1>${howdy.sayHi()}</h1>`);
